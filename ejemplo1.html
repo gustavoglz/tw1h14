@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Primer Ejemplo Javascript</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<script type="text/javascript" charset="utf-8">
+			//alert("Soy un Alert Box");
+			var pasa = "si";
+			//var uno = "Mi número es: ";
+			//var dos = "6";
+			
+			if (pasa == "si"){
+				var total = "<h1> Si pasó </h1>";
+			}else if (pasa == "no"){
+				var total = "<h1> No pasó </h1>";
+			};
+			
+			var colores = ["#068892", "#eeac1f", "#ee1fe2", "#ee1f2d"];
+			
+			//color1 = colores[0];
+			//color2 = colores[1];
+			//color3 = colores[2];
+			//color4 = colores[3];
+			
+			//alert(colores[0]+colores[1]);
+		
+		
+			fecha=new Date();
+			hora=fecha.getHours();
+			minutos = fecha.getMinutes();
+			
+			
+			if(hora<12 && minutos>0 ){
+	imagen="http://esphoto500x500.mnstatic.com/amanecer-en-el-campello_6592031.jpg";
+			}else{					imagen="http://colorinnature.files.wordpress.com/2011/04/una-noche-en-santander.jpg";
+			};
+				
+			//cargarImagen();
+			//alert(hora);
+			
+		
+		</script>
+		
+		<style type="text/css" media="screen">
+			body{
+				margin:0;
+				padding:0;
+			}
+			#fondo{
+				width:100%;
+				height:100%;
+				position:fixed;
+				z-index:-9;
+				top:0;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="fondo"></div>
+		
+		<script type="text/javascript" charset="utf-8">
+			
+			fondojs = document.getElementById("fondo");
+			fondojs.style.backgroundColor = colores[1];
+			
+		</script>
+		<!--<script type="text/javascript" charset="utf-8">
+			document.write("<img src='" + imagen + "' />")
+		</script>-->
+	
+			<script type="text/javascript" charset="utf-8">
+				document.write(total);
+			</script>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel risus et elit consectetur tempor. Cras id elementum lacus. Mauris et viverra urna. Nullam eget fringilla felis, sit amet ultricies ex. Ut consequat turpis nisl, quis egestas nulla tempus nec. Etiam eget facilisis arcu. Phasellus gravida feugiat dictum. Mauris eu molestie orci. Vivamus id justo id magna convallis pretium. Donec dictum dolor non nunc ornare euismod. Vestibulum ornare tellus vel dapibus consequat. Quisque ut accumsan dolor, vitae blandit urna. Ut scelerisque porta purus, ac varius arcu. Pellentesque elementum ullamcorper lacus, sit amet venenatis eros.</p>
+	</body>
+</html> 
