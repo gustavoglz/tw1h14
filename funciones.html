@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Funciones</title> 
+
+<script type="text/javascript" charset="utf-8">
+function suma(v1,v2){
+	alert(v1*v2);
+	};
+	
+	var colores=["#068892", "#FF99CC", "#3366FF", "#66FF66"]; 
+	   
+	
+	
+	function cambiaFondo(){  
+		aleatorio = Math.floor(Math.random() * colores.length); 
+		
+		document.body.style.backgroundColor = colores[aleatorio];
+	};
+	
+	function escribirPais(){
+		document.getElementById("textoPais").innerHTML=document.getElementById("pais").value;
+	}      
+</script>
+       <style type="text/css" media="screen">
+       	#textoPais
+		{
+			font-size: 100px;
+			text-align: center;
+		}
+       </style>
+</head> 
+<body>  
+	<!--<input id="cambiaFondo" type="button" value="cambiar Fondo" onclick="cambiaFondo();" /> --> 
+	 
+   <input type="text" name="pais" id="pais">
+	<input id="botonPais" type="button" value="Escribir pais" onclick="escribirPais();" /> 
+	
+	     <div id="textoPais"></div>
+	
+	
+	
+	
+      <script type="text/javascript" charset="utf-8">
+      	//suma(6,5);
+		//cambiaFondo(); 
+		
+	   // document.getElementById("pais").value="japon"; 
+      </script> 
+
+</body>
+</html>
