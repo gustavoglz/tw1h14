@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<meta charset="utf-8" /> 
+<html>
+<head>
+<title>Operaciones</title>
+	<style type="text/css" media="screen">
+		#suma,#resta,#division{
+			 width:33%;
+			 float:left;
+			min-height:400px;
+			text-align: center;
+		} 
+		#suma{
+			background:#009900;
+		}      
+		#resta{
+			background:#33CCFF;
+		}  
+		#division{
+			background:#FFCC66;
+		}
+		#suma,#resta,#division h1{
+			text-align: center;
+			font-family: Arial, "MS Trebuchet", sans-serif; 
+			color:black;
+		} 
+		.clear{
+			clear:both;
+		}
+		.campos{
+			width:50px;
+			height:50px;
+			text-align: center;
+			line-height:50px;
+			font-size: 30px;
+		}
+		.operadores{
+			font-size: 30px;
+			margin:0 10px;
+		}
+		.botones{
+			width: 160px;
+			margin:30px 0 0 0;
+			font-size: 30px;
+			background:black;
+			border:0px;
+			color:white;
+			height:50px;
+			font-family: Arial, "MS Trebuchet", sans-serif;
+		}
+		.resultado{
+			border:1px solid white;
+			height:50px;
+			width:150px;
+			margin:30px auto 0 auto;
+			line-height:50px;
+			 font-size: 30px;
+			font-family: Arial, "MS Trebuchet", sans-serif;
+		}
+	</style>
+	<script type="text/javascript" charset="utf-8">
+		function fsuma(){
+			//alert("suma");
+			document.getElementById("rsuma").innerHTML = parseFloat(document.getElementById("s1").value) +  parseFloat(document.getElementById("s2").value);
+		};
+		function fresta(){
+			//alert("resta");
+			document.getElementById("rresta").innerHTML =
+			parseFloat(document.getElementById("r1").value) -  parseFloat(document.getElementById("r2").value);
+		};
+		function fdivide(){
+			//alert("divide");
+			var rdiv = parseFloat(document.getElementById("d1").value) /  parseFloat(document.getElementById("d2").value);
+			document.getElementById("rdivide").innerHTML =  Math.round(rdiv*100)/100;
+		};
+	</script>  
+</head>
+
+<body>
+    <div id="suma">
+		<h1>Suma</h1>
+		<input type="text" name="s1" id="s1" class="campos"></input>
+		<span class="operadores">+</span>
+		<input type="text" name="s2" id="s2" class="campos"></input>
+		<br />
+		<input type="button" id="sumar" value="Sumar" class="botones" onclick="fsuma();"></input>
+		<br />
+		<div class="resultado" id="rsuma"></div>
+	</div>
+	
+	<div id="resta">
+		<h1>Resta</h1>
+		<input type="text" name="r1" id="r1" class="campos"></input>
+		<span class="operadores">-</span>
+		<input type="text" name="r2" id="r2" class="campos"></input>
+		<br />
+		<input type="button" id="restar" value="Restar" class="botones" onclick="fresta();"></input>
+		<br />
+		<div class="resultado" id="rresta"></div>
+	</div>
+	 
+	<div id="division">
+		<h1>División</h1>
+		<input type="text" name="d1" id="d1" class="campos"></input>
+		<span class="operadores">/</span>
+		<input type="text" name="d2" id="d2" class="campos"></input>
+		<br />
+		<input type="button" id="dividir" value="Dividir" class="botones" onclick="fdivide();"></input>
+		<br />
+		<div class="resultado" id="rdivide"></div>
+	</div> 
+	<div class="clear"></div>
+</body>
+</html>
