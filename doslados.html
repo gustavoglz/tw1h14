@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script> 
+		<title>2 Lados</title> 
+		
+		<style type="text/css" media="screen">
+		   #bloqueA{
+			background:red;      
+			height:100%;
+			width:50%;
+			position:absolute;    
+			float:left;  
+			left:0;
+			
+		}     
+		
+		 #bloqueB{
+			background:green;      
+			height:100%;
+			width:50%;
+			position:absolute;    
+			float:right;   
+			left:50%; 
+			
+		}
+		
+		</style>
+		
+	  
+  
+	</head>
+	<body>
+  	<div id="bloqueA">
+		<input type="button" id="btnIzq" value="izquierda"></input> 
+		</div> 
+	<div id="bloqueB">
+		<input type="button" id="btnDer" value="derecha"></input>
+		</div> 
+		
+ 			<script type="text/javascript" charset="utf-8">
+				$("#btnIzq").click(function(){ 
+					
+					
+					if($("#bloqueA").hasClass("mini")){
+					   	$("#bloqueA").animate({
+							width:"50%",
+							left:"0%",
+						});
+						$("#bloqueA").removeClass("mini");  
+						
+						 $("#bloqueB").animate({
+								left:"50%",
+					     }); 
+					}  else{
+						 $("#bloqueA").animate({
+							width:"25%",
+							left:"75%",
+						 });
+						$("#bloqueA").addClass("mini");  
+						
+						$("#bloqueB").animate({
+							left:"100%",
+						});
+				    }     
+						
+				});  
+				
+				$("#btnDer").click(function(){ 
+					
+					
+					if($("#bloqueB").hasClass("mini2")){
+					   	$("#bloqueB").animate({
+							width:"50%",
+							left:"50%",
+						});
+						$("#bloqueB").removeClass("mini2");  
+						
+						 $("#bloqueA").animate({
+								left:"0%",
+					     }); 
+					}  else{
+						 $("#bloqueB").animate({
+							width:"25%",
+							left:"0%",
+						 });
+						$("#bloqueB").addClass("mini2");  
+						
+						$("#bloqueA").animate({
+							left:"-50%",
+						});
+				    }     
+						
+				});
+			</script>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

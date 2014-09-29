@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<style type="text/css" media="screen">
+	.cuadro{
+		width:50px;
+		height:50px;
+		margin:5px; 
+		float:left;
+	}
+	</style> 
+</head>
+<body>
+
+<button onclick="myFunction()">Ejecutar</button>
+                      
+<input type="text" id="numero" value=""></input>
+<div id="demo"></div>
+
+<script> 
+
+    
+	colores = ["red","black","green","yellow","purple","pink","#f4f4f4","#A0A0A0"]
+
+function myFunction() {
+ 
+	numerousuario = document.getElementById("numero").value;
+    for (i = 1; i <= numerousuario; i++) { 
+	          aleatorio = Math.floor(Math.random() * colores.length);
+         jQuery("#demo").append('<div class="cuadro" style="background:' + colores[aleatorio] + '"></div>')
+    }
+     
+	$(".cuadro").mouseenter( function(){
+		     $(this).animate({
+				width:"70px",
+				height:"70px",			
+			},100)
+	});
+	$(".cuadro").mouseleave( function(){
+		     $(this).animate({
+			   width:"50px",
+				 height:"50px", 
+			},100)
+	});
+}; 
+
+    
+
+
+</script>
+
+</body>
+</html>
