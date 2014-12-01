@@ -1,0 +1,66 @@
+body{
+	font-family: 'Lato', sans-serif;
+}
+
+header{
+	border:1px solid red;
+	text-align: center;
+}
+.clear{
+	clear:both;
+}
+#contiene_nav{
+	width:350px;
+	margin:0 auto;
+	text-align: center;
+}
+#menu_principal{
+}
+#menu_principal ul{
+	text-align: center;
+	list-style: none;
+	margin:0;
+	padding:0;
+}  
+#menu_principal li{
+	float:left;
+	padding:5px;
+	background:green;
+}
+#menu_principal li:hover{
+	background:#0998d4;
+} 
+#menu_principal li a{
+	color:white;
+	text-decoration: none;
+}
+.pelicula{
+    width: 200px;
+    height: 400px;
+    float: left;
+    margin: 10px;
+}
+.pelicula:hover{
+    background: #f4f4f4
+}
+.pelicula img{
+    width: 200px;
+    max-height: 300px;
+    min-height: 300px;
+}
+.datopelicula{
+    text-align: left;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+}
+.nombrepelicula{
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px dashed red;
+}
+
+
+

@@ -28,3 +28,4 @@ Lista de Tareas:
 6. Tarea_6: Efectos jQuery
 7. Tarea_7: Ejercicio dos lados
 8. Tarea_8: Repaso, ciclos, examen 1er parcial
+9. Trabajo con Moisés
